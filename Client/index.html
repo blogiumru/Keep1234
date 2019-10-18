@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html  manifest="manifest.appcache">
+<head>
+<title>Keep1234</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link type="text/css" rel="stylesheet" href="style/style.css" />
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<script src="libs/jszip.min.js"></script>
+<script src="libs/aes.js"></script>
+<script src="libs/sha256.js"></script>
+<script src="main.js"></script>
+</head>
+<body>
+
+<div id="login">
+<p>Type your Masker-Key</p>
+<input id="loginInput" type="password" onkeyup="login(event,this)"/>
+<span id="wrongKey">Invalid key. Try again.</span>
+</div>
+
+<div id="present">
+<div id="status">!</div>
+<input type="text" id="search" onkeyup="typing()" placeholder="Type something to search..."/>
+	<div id="passnotes"></div>
+
+	<div id="panel">
+		<div id="add" onclick="modal.openForAdd();"></div>
+		<div id="upload" onclick="database.save(1);"></div>
+		<div id="download" onclick="database.download();"></div>
+		<div id="settingsB" onclick="modal.settings(1);"></div>
+	</div>
+
+</div>
+
+<div id="dialog">
+	<div>Are you sure?</div>
+	<p>Deleting of smth.</p>	
+	<div class="buttons">
+		<div onclick="">Yes</div>
+		<div onclick="modal.dialog(0)">No</div>
+	</div>
+</div>
+<div id="blackback"></div>
+<div id="notification"></div>
+<div id="container">
+	<h1>Add new record</h1>
+	<label>Name: <input type="text" id="fName"/></label>
+	<label>URL: <input type="text" id="fURL"/></label>
+	<label>Login: <input type="text" id="fLogin"/></label>
+	<label>Password: <input type="password" id="fPass"/></label><div id="dice" onclick="$('fPass').value=generatePassword()"></div><div id="eye" onclick="this.className=(this.className=='hidden')?'':'hidden';$('fPass').type=($('fPass').type=='password')?'text':'password'"></div>
+	<div class="buttons">
+	<div onclick="note.save();">Save</div><div onclick="modal.workNote(0)">Cancel</div>
+	</div>
+</div>
+
+<div id="settings" ondrop="test(event)">
+	<h1>Settings</h1>
+	<label>Server URL <input onfocus="if(this.value.trim()=='')this.value='http://'" placeholder="http://example.com/manager.php" type="text" id="sURL"/></label>
+	<label>Auto-update DB <input id="sAU" type="checkbox"></label>
+	
+	<label>Pass length <input type="number" min="8" max="24" id="sPassLength"/></label>
+	<label>Lock after <input type="number" min="0" max="360" id="sLockAfter"/> minutes</label>
+	
+	<div class="buttons row">
+	<div onclick="settings.downloadDB(localStorage['file'],'data.keep1234','text/plain')">Donwload encrypted DB</div><div onclick="modal.erase()">Erase all data</div>
+	</div>
+	<div class="buttons">
+	<div onclick="settings.save();">Save</div><div onclick="modal.settings(0)">Cancel</div>
+	</div>
+	<div id="ver">Version: 1.0</div>
+</div>
+</body>
+</html>

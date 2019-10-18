@@ -1,0 +1,593 @@
+﻿@font-face {
+	font-family: 'PLUS';
+	src: url(fonts/mplusrounded1c/RoundedMplus1c-Black.ttf);
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PLUS';
+	src: url(fonts/mplusrounded1c/RoundedMplus1c-ExtraBold.ttf);
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PLUS';
+	src: url(fonts/mplusrounded1c/RoundedMplus1c-Bold.ttf);
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PLUS';
+	src: url(fonts/mplusrounded1c/RoundedMplus1c-Medium.ttf);
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PLUS';
+	src: url(fonts/mplusrounded1c/RoundedMplus1c-Regular.ttf);
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PLUS';
+	src: url(fonts/mplusrounded1c/RoundedMplus1c-Light.ttf);
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PLUS';
+	src: url(fonts/mplusrounded1c/RoundedMplus1c-Thin.ttf);
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Asterisk';
+	src: url(fonts/asterisk.ttf);
+	font-weight: 500;
+	font-style: normal;
+}
+
+#login * {
+	user-select: none;
+}
+
+body {
+	font-family: 'PLUS';
+	font-weight: 400;
+	background: #00c2ff;
+	color: white;
+}
+
+#status,
+.status {
+	user-select: none;
+}
+
+#login {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	opacity: 1;
+	transition: 0.5s opacity;
+}
+
+#login p {
+	text-align: center;
+	font-size: 21px;
+}
+
+#login input {
+	border-radius: 15px;
+	outline: none;
+	border: none;
+	width: 250px;
+	height: 50px;
+	box-shadow: 0px 5px 20px #00000030;
+	font-size: 25px;
+	padding: 0px 20px;
+	text-align: center;
+	font-family: Asterisk;
+	font-size: 20px;
+}
+
+#login span {
+	font-size: 15px;
+	color: white;
+	/* background: red; */
+	width: 160px;
+	text-align: center;
+	display: table;
+	margin: 10px auto;
+	opacity: 0;
+	transition: 1s opacity;
+}
+
+@-webkit-keyframes shining {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+#present {
+	transition: 0.5s;
+	opacity: 0;
+	display: none;
+	max-width: 1024px;
+	margin: auto;
+}
+
+#status {
+	display: table;
+	margin: auto;
+}
+
+input#search {
+	border-radius: 9px;
+	outline: none;
+	border: none;
+	width: 100%;
+	height: 45px;
+	box-shadow: 0px 3px 10px #00000030;
+	font-size: 25px;
+	padding: 0px 20px;
+	text-align: center;
+	font-family: 'PLUS';
+	box-sizing: border-box;
+}
+
+input#search::placeholder {
+	color: #ccc;
+}
+
+#passnotes {
+	margin-bottom: 100px;
+}
+
+#passnotes .empty {
+	text-align: center;
+}
+
+#passnotes div {
+	background: white;
+	color: #4e4e4e;
+	height: 30px;
+	font-size: 21px;
+	border-radius: 9px;
+	padding: 7px 14px;
+	margin: 4px 0px;
+}
+
+#passnotes div.hidden {
+	display: none;
+}
+
+#passnotes div a {
+	color: #4e4e4e;
+	text-decoration: none;
+	border-bottom: solid 2px #00c2ff;
+}
+
+#passnotes div img {
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin-right: 7px;
+}
+
+#passnotes div>span {
+	margin: 0px 9px;
+	padding: 0px;
+}
+
+#passnotes div>span.url {
+	color: #ccc;
+}
+
+
+/*
+background: URL(https://youtube.com/favicon.ico) no-repeat;
+    background-size: 100%;
+    height: 30px;
+    width: 30px;
+    display: block;
+    float: left;
+    margin-right: 7px;
+	
+*/
+
+.name {
+	font-weight: 600;
+}
+
+#passnotes div span.ctrl {
+	float: right;
+	margin-right: -8px;
+}
+
+#passnotes div span.ctrl span.copy {
+	background: URL(buttons/copy.png) no-repeat;
+}
+
+#passnotes div span.ctrl span.edit {
+	background: URL(buttons/edit.png) no-repeat;
+}
+
+#passnotes div span.ctrl span.remove {
+	background: URL(buttons/remove.png) no-repeat;
+}
+
+#passnotes div span.ctrl span {
+	margin: 3px 5px;
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	background-size: 100% !important;
+	cursor: pointer;
+}
+
+#passnotes div span.ctrl span:hover {
+	opacity: 0.5;
+}
+
+
+/* #ff7800 */
+
+#panel {
+	background: white;
+	width: 100%;
+	height: 40px;
+	/* border-radius: 15px 15px 0px 0px; */
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	z-index: 1;
+	/*   max-width: 1024px;
+    left: auto;*/
+}
+
+#panel div {
+	width: 25%;
+	height: 40px;
+	background: URL(buttons/settings.png) no-repeat center;
+	background-size: 32px;
+	float: left;
+	cursor: pointer;
+}
+
+#panel div#add {
+	/*border-radius: 15px 0px 0px 15px;*/
+	background-image: URL(buttons/add.png)
+}
+
+#panel div#upload {
+	background-image: URL(buttons/upload.png)
+}
+
+#panel div#download {
+	background-image: URL(buttons/download.png)
+}
+
+#panel div#settingsB {}
+
+#panel div:hover {
+	background-color: #e2e2e2;
+}
+
+#container,
+#settings {
+	background: white;
+	width: 500px;
+	height: 400px;
+	margin: 0;
+	position: fixed;
+	z-index: 3;
+	top: 50%;
+	left: 50%;
+	color: #555;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	box-shadow: 0px 5px 20px #00000030;
+	border-radius: 15px;
+	padding: 15px;
+	user-select: none;
+	transition: 0.5s;
+	opacity: 0;
+	display: none;
+}
+
+#container h1,
+#settings h1 {
+	text-align: center;
+	color: #00c2ff;
+}
+
+#container label {
+	font-size: 24px;
+	margin-left: 50px;
+	margin-top: 17px;
+	display: block;
+	display: inline-block;
+	user-select: none;
+}
+
+#container input,
+#settings input {
+	border-radius: 9px;
+	outline: none;
+	border: 1px solid #c5c5c5;
+	width: 220px;
+	height: 30px;
+	font-size: 25px;
+	padding: 0px 20px;
+	text-align: left;
+	color: #888888;
+	margin-left: 9px;
+	font-family: 'PLUS';
+	font-weight: 500;
+	border: none;
+	border-radius: 0px;
+	border-bottom: 1px solid #d2d2d2;
+	transition: 0.2s;
+}
+
+#container input:focus {
+	border-bottom: 1px solid #929292;
+}
+
+#container #fName {
+	width: 266px;
+}
+
+#container #fURL {
+	width: 282px;
+}
+
+#container #fLogin {
+	width: 264px;
+}
+
+#container #fPass {
+	PADDING-RIGHT: 35px;
+	width: 205px;
+}
+
+#container #dice {
+	width: 35px;
+	height: 35px;
+	background: URL(buttons/dice.png) no-repeat center;
+	background-size: 36px;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0px 0px 0px -33px;
+	transition: 0.2s opacity;
+}
+
+#container #dice:hover {
+	opacity: 0.5;
+}
+
+#container #eye {
+	width: 35px;
+	height: 35px;
+	background: URL(buttons/eyes.png) no-repeat center;
+	background-size: 70px;
+	background-position: -35px;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0px 0px 0px 11px;
+	transition: 0.2s opacity;
+}
+
+#container #eye.hidden {
+	background-position: 0px;
+}
+
+div.buttons {
+	margin: auto;
+	display: table;
+	margin-top: 8px;
+}
+
+div.buttons>div {
+	height: 40px;
+	width: 120px;
+	background: #00c2ff;
+	border-radius: 10px;
+	color: white;
+	display: inline-block;
+	text-align: center;
+	line-height: 2;
+	font-size: 21px;
+	margin: 31px 10px auto 10px;
+	cursor: pointer;
+	transition: 0.15s background;
+}
+
+div.buttons>div:hover {
+	background: #57d7ff
+}
+
+#settings {
+	font-size: 21px;
+}
+
+#settings:active {
+	cursor: grabbing;
+	cursor: -moz-grabbing;
+	cursor: -webkit-grabbing;
+}
+
+#settings input {
+	width: 355px;
+	padding: 0px !important;
+	font-size: 21px;
+	font-weight: 500;
+}
+
+#settings input::placeholder {
+	color: #ccc;
+}
+
+#settings input[type=checkbox] {
+	height: 26px;
+	width: 26px;
+	margin-bottom: -5px;
+	display: inline-flex;
+}
+
+#settings input[type=checkbox]:hover {
+	cursor: pointer;
+}
+
+div.buttons.row>div {
+	width: auto;
+	padding: 0px 16px;
+	display: inline-block;
+	margin: 9px 9px;
+	background: #555555;
+}
+
+div.buttons.row>div:hover {
+	background: #888;
+}
+
+div.buttons.row {
+	margin-bottom: -19px;
+}
+
+#settings label {
+	display: block;
+	margin: 17px auto;
+}
+
+#settings label:nth-child(4),
+#settings label:nth-child(5) {
+	display: inline-block;
+	margin-left: 41px;
+	margin-top: 4px !important;
+}
+
+#settings label:nth-child(4) {
+	margin-left: 0px;
+}
+
+#settings #sLockAfter,
+#settings #sPassLength {
+	width: 60px;
+	padding: 0px;
+	text-align: center;
+	margin-left: 0px;
+}
+
+#settings #ver {
+	font-size: 14px;
+	position: fixed;
+	margin-top: -4px;
+}
+
+#blackback {
+	position: fixed;
+	z-index: 2;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	transition: 0.5s;
+	opacity: 0;
+	display: none;
+}
+
+#notification {
+	position: fixed;
+	z-index: 5;
+	top: 0px;
+	right: 0px;
+	width: auto;
+	height: 30px;
+	line-height: 1.8;
+	display: block;
+	background: white;
+	color: black;
+	padding: 0px 10px;
+	transition: 0.2s;
+	-webkit-transform: translateY(-50px);
+}
+
+#notification.show {
+	-webkit-transform: translateY(0px);
+}
+
+#notification .good {
+	color: #669e6d;
+	color: #00c2ff;
+}
+
+#notification .bad {
+	color: #ff2e22;
+}
+
+#dialog {
+	background: white;
+	font-size: 22px;
+	text-align: center;
+	width: 330px;
+	height: 140px;
+	margin: 0;
+	position: fixed;
+	z-index: 3;
+	top: 50%;
+	left: 50%;
+	color: #555;
+	transform: translate(-50%, -50%);
+	box-shadow: 0px 5px 20px #00000030;
+	border-radius: 15px;
+	padding: 15px;
+	user-select: none;
+	transition: 0.5s;
+	opacity: 0;
+	display: none;
+}
+
+#dialog p {
+	font-size: 15px;
+	font-weight: 800;
+}
+
+#dialog div.buttons {
+	margin-top: -20px;
+}
+
+@media (max-width: 650px) {
+	#passnotes div {
+		min-height: 30px;
+		display: table;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	#passnotes div>span {
+		display: block;
+	}
+	#passnotes div>span.url {
+		display: none;
+	}
+	#passnotes div>span.login {
+		display: inline-block;
+	}
+}
