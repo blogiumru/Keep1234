@@ -23,6 +23,6 @@ die();
 if(!isset($_POST['data']) OR !isset($_POST['key']) OR $_POST['key']!=$key) die();
 
 changeVer();
-file_put_contents('brokenBD',$_POST['data']);
+file_put_contents('main.db',$_POST['data']);
 echo "Succ";
 ?>
