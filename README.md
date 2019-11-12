@@ -9,7 +9,7 @@ I recommend you to use client-side files with NW.JS and host it on your own HDD 
 
 Later I am going to add sources for build Android and iOS apps. But for now you can do it yourselves using https://github.com/slymax/webview.
 ## How to use?
-- During first lanch you have to create a Master-key for crypting the database.
+- During first lanch you have to create a Master-key for encrypting the database.
 - Then for open the database you need to type the correct master-key.
 - You can control cloud sync manually or automatically (if 'Autoupdate' checkbox is checked)
 # Server (PHP)
